@@ -12,7 +12,11 @@ jobs:
 
     steps:
       - name: Show System Information
-        run: uname -a
+        run: |
+          echo "Running on $(uname -s) $(uname -r)"
+          echo "Current user: $(whoami)"
+          echo "OS: $RUNNER_OS"
+          echo "Architeture: $RUNNER_ARCH"
 
       - name: Say Hello
         run: echo "👋 Hello from GitHub Actions!"
