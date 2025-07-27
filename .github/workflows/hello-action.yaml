@@ -11,5 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Show System Information
+        run: uname -a
+
       - name: Say Hello
         run: echo "👋 Hello from GitHub Actions!"
+
+      - name: Show Current Date and Time
+        run: date
