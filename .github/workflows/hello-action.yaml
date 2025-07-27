@@ -1,4 +1,7 @@
-name: Hello GitHub Actions
+name: Hello World
+
+env:
+  USERNAME: "aa-nadim"
 
 on:
   workflow_dispatch:
