@@ -2,7 +2,7 @@ name: Hello GitHub Actions
 
 on:
   workflow_dispatch:
-    input:
+    inputs:
         username: 
           description: 'Name to greet'
           required: false
@@ -31,7 +31,7 @@ jobs:
           echo "Architecture: $RUNNER_ARCH"
 
       - name: Run a one-line script
-        run: echo Hello ${{ inputs.username }}
+        run: echo Hello ${{ inputs.username || 'World' }}
 
       - name: Show Current Date and Time
         run: date
