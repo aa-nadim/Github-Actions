@@ -13,7 +13,7 @@ jobs:
     steps:
 
       - name: Install Dependencies
-        uses: |
+        run: |
           sudo apt-get update
           sudo apt-get install -y curl jq
 
@@ -25,7 +25,7 @@ jobs:
           echo "Running on $(uname -s) $(uname -r)"
           echo "Current user: $(whoami)"
           echo "OS: $RUNNER_OS"
-          echo "Architeture: $RUNNER_ARCH"
+          echo "Architecture: $RUNNER_ARCH"
 
       - name: Say Hello
         run: echo "👋 Hello from GitHub Actions!"
