@@ -17,9 +17,6 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y curl jq
 
-          echo "jq: $(jq --version)"
-          echo "curl: $(curl --version)"
-
       - name: Show System Information
         run: |
           echo "Running on $(uname -s) $(uname -r)"
@@ -32,3 +29,16 @@ jobs:
 
       - name: Show Current Date and Time
         run: date
+
+  checkout-example:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Display files in the repository
+        run: ls -la
+
+      - name: Show Git Status
+        run: git status
